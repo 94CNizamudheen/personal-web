@@ -409,23 +409,24 @@ I'm passionate about staying up-to-date with industry trends and continuously im
                                 </div>
                             </div>
                             <div class="column">
-                                <form action="https://api.web3forms.com/submit" method="POST" id="form" class="bg-light p-4 p-md-5 contact-form">
+                              <form action="https://api.web3forms.com/submit" method="POST" id="form" class="bg-light p-4 p-md-5 contact-form">
 
                                     <div class="form-group">
                                         <input type="hidden" name="access_key" value="4076bdc5-301a-4453-a4aa-74e2b27d3d23">
-                                        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name">
+                                        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" onclick="return validateName()" required onkeyup="validateForm()"/>
                                         <span id="name_error" class="text-danger"></span>
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" id="email" name="email" class="form-control" placeholder="Your Email">
+                                        <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" onclick="return validateEmail()" required onkeyup="validateForm()"/>
                                         <span id="email_error" class="text-danger"></span>
                                     </div>
                                     <div class="form-group">
-                                        <textarea id="message" name="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                                        <textarea id="message" name="message" cols="30" rows="7" class="form-control" placeholder="Message" onclick="return validateMessage()" required onkeyup="validateForm()"></textarea>
                                         <span id="message_error" class="text-danger"></span>
                                     </div>
                                     <div class="form-group">
-                                        <input type="submit" id="btn-click" value="Send Message" class="btn btn-primary py-3 px-5"/>
+                                        <input type="submit" id="btn-click" value="Send Message" class="btn btn-primary py-3 px-5" onclick="return validateForm()" required onkeyup="validateForm()"/>
+                                        <span id="submit_error" class="text-danger"></span>
                                     </div>
                                 </form>
                             </div>
@@ -445,5 +446,6 @@ I'm passionate about staying up-to-date with industry trends and continuously im
         <script src="js/main.js"></script>
         <script src="js/form.js"></script>
         <script src="johndoe.js"></script>
+        <script src="js/send.js"></script>    
     </body>
 </html>
